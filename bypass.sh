@@ -44,7 +44,7 @@ echo -e "[!] ${YELLOW}connect your iDevice to your Mac, then press [Enter] to st
 read -p ""
 
 # bind SSH ports
-echo -e "[-] ${GREEN}bind SSH ports from 12222 to 444...${RESET}"
+echo -e "[-] ${GREEN}bind SSH ports from 12222 to 44...${RESET}"
 iproxy 12222 44 > /dev/null 2>&1
 echo $! > .iproxy.pid
 trap 'kill -9 $(cat .iproxy.pid); exit 1' INT
